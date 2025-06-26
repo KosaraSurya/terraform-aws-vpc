@@ -1,4 +1,4 @@
-resource "aws_vpc_peering_connection" "foo" {
+resource "aws_vpc_peering_connection" "default" {
     #peer_owner_id = var.peer_owner_id # Here we are using our own account for both vpc's so owner is not required.
   count = var.is_peering_required ? 1 : 0
   peer_vpc_id   = data.aws_vpc.default.id # Accepter tVPC
